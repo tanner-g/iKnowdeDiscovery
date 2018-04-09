@@ -1,0 +1,10 @@
+Objective:
+
+ask user for a directory path and we will return a list of files and their corresponding inodes.
+
+ --> this is helpful becuase it shows other files which may point to a sensitive file.
+
+
+---> ls can get inode count
+----> could also use sleuthkit tools
+ 
