@@ -3,7 +3,7 @@
 
 ## Background
 
-iKnowdeDiscovery is an open source tool that adds new insight into inodes history and tracking by creating a visualization timelime for forensic examiners. This tool aims to make inode traversal and history more trackable, readable, and meaningful during a forensic investigation.
+iKnowdeDiscovery is an open source tool that enhances inode history and tracking by creating a user friendly visualization of the inode's timelime. We strive to make inode traversal more meaningful by making it easier to track, parse, and accessible for a forensic investigator.
 
 
 ### Features
