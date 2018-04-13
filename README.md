@@ -17,5 +17,6 @@ iKnowdeDiscovery is an open source tool that adds new insight into inodes histor
 
 ##
 #### PROJECT REMINDER
+
+ - When contributing to the project, make sure to **PULL** before you **PUSH**
 ##
- - Make sure to **PULL** before you **PUSH**
