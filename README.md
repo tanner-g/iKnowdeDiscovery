@@ -16,6 +16,6 @@ iKnowdeDiscovery is an open source tool that adds new insight into inodes histor
    - Detect multiple files that point to the same Inode
 
 
-#### REMINDER
+#### PROJECT REMINDER
 
- --> Make **SURE** to **PULL* before you **PUSH**
+ --> Make **SURE** to **PULL** before you **PUSH**
