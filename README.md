@@ -9,8 +9,8 @@ iKnowdeDiscovery is an open source tool that adds new insight into inodes histor
 ### Features
 
  - Detect suspicious Inode Activity
-  - Detect, log, and show recently freed/created/altered Inodes
+   - Detect, log, and show recently freed/created/altered Inodes
  - Inode Tree Visualizer
-  - Using Python's PLOTLY to show Inodes on a graph
+   - Using Python's PLOTLY to show Inodes on a graph
  - Hardlink Detection
-  - Detect multiple files that point to the same Inode
+   - Detect multiple files that point to the same Inode
