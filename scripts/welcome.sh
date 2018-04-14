@@ -1,3 +1,6 @@
+# Welcome.sh Script. 
+# Description: Display welcome screem to users and present command line options for using the tool.
+
 echo -e "
 #    _ _  __                       _      ____  _                                  
 #   (_) |/ /_ __   _____      ____| | ___|  _ \(_)___  ___ _____   _____ _ __ _   _ 
