@@ -15,6 +15,13 @@ iKnowdeDiscovery is an open source tool that enhances inode history and tracking
  - **Hardlink File Detection**
    - Detect multiple files that point to the same Inode
 
+### Files
+
+- **enumeration.sh**
+  - Enumerates all files in a directory
+  - Get the Inode of each file
+  - Find all other files with each of those inodes
+
 ##
 #### PROJECT REMINDER
 
