@@ -17,7 +17,7 @@ iKnowdeDiscovery is an open source tool that enhances inode history and tracking
 
 ##
 
-### Files
+### ![#1589F0] Files `#1589F0`
 
 - **main.sh**
   - Calls the welcome page
@@ -36,10 +36,10 @@ iKnowdeDiscovery is an open source tool that enhances inode history and tracking
 - **ext_detect.py**
    -  script parses output and sends status code based on ouput
     - Status Codes:
-      - EXT2   -->  Detects an EXT2 Filesystem
-      - EXT3   -->  Detects an EXT3 Filesystem
-      - EXT4   -->  Detects an EXT4 Filesystem
-      - ERROR  -->  No file system detected
+      - EXT2 &nbsp;&nbsp;&nbsp;-->  Detects an EXT2 Filesystem
+      - EXT3 &nbsp;&nbsp;&nbsp;-->  Detects an EXT3 Filesystem
+      - EXT4 &nbsp;&nbsp;&nbsp;-->  Detects an EXT4 Filesystem
+      - ERROR &nbsp;&nbsp;&nbsp;-->  No file system detected
 
 - **welcome.sh**
   - script to print ASCII art and welcome message to the user
