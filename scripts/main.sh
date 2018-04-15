@@ -17,7 +17,7 @@ sh ./print_line.sh
 read filesystempath
 # export makes variable global in scope
 export filesystempath
-
+sh ./print_line.sh
 # exit_detection.sh checks the filesystem type
 sh ./ext_detection.sh
 

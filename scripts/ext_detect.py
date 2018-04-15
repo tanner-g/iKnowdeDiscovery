@@ -7,10 +7,10 @@ for line in sys.stdin:
 
 if (extcommandresult.find("ext2") != -1): 
 #and (systempath.find("ext3") or systempath.find("ext4"))):
-    print("WE GOT ONE!!!")
-    print(extcommandresult)
-elif (extcommandresult.find("ext3") or extcommandresult.find("ext4")) != -1:
-    print("FOUND EXT3/4 system: \n" + "RESULT:\t"+extcommandresult)
+    print("EXT2")
+elif (extcommandresult.find("ext3")) != -1:
+    print("EXT3")
+elif (extcommandresult.find("ext4")) != -1:
+    print("EXT4")
 else:
-    print("ERROR: BAD filesystem result\n" + extcommandresult)
-
+    print("ERROR")
