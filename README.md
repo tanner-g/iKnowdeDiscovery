@@ -17,7 +17,7 @@ iKnowdeDiscovery is an open source tool that enhances inode history and tracking
 
 ##
 
-### ![#1589F0] Files
+### <span style="color:blue"> Files </span> 
 
 - **main.sh**
   - Calls the welcome page
