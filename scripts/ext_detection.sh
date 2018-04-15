@@ -7,7 +7,7 @@ echo [COMMAND] sudo file -s $filesystempath
 filesysteminfo=$(sudo file -s $filesystempath > user_path)
 result=$(python ext_detect.py < user_path)
 # echo is for TESTING
-echo $result
+#echo $result
 
 if [ "$result" == 'ERROR' ]
 then

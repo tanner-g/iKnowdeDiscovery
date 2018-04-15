@@ -10,6 +10,11 @@ echo -e "
  | | | \| | | | (_) \ V  V / (_| |  __/ |_| | \__ \ (_| (_) \ V /  __/ |  | |_| |
  |_|_|\_\_| |_|\___/ \_/\_/ \__,_|\___|____/|_|___/\___\___/ \_/ \___|_|   \__, |
                                                                             |___/  "
+
+echo -e " 
+	We should put a cool quote or something HERE...
+"
+
 # Adds a line to split up text on screen
 	sh ./print_line.sh
 
