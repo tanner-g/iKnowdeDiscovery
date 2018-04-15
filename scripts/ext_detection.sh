@@ -9,16 +9,16 @@ result=$(python ext_detect.py < user_path)
 # echo is for TESTING
 echo $result
 
-if "$result" == 'ERROR'
+if [ "$result" == 'ERROR' ]
 then
 	echo "[ERROR] BAD FILESYSTEM TYPE"
-elif "$result" == 'EXT2'
+elif [ "$result" == 'EXT2' ]
 then
 	echo "[OK] Filesytem type: EXT2"
-elif "$result" = 'EXT3'
+elif [ "$result" = 'EXT3' ]
 then
 	echo "[OK] Filesystem type: EXT3"
-elif "$result" == 'EXT4'
+elif [ "$result" == 'EXT4' ]
 then
 	echo "[OK] Filesystem type: EXT4"
 else
