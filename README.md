@@ -34,10 +34,10 @@ iKnowdeDiscovery is an open source tool that enhances inode history and tracking
 - **ext_detect.py**
    -  script parses output and sends status code based on ouput
     - Status Codes:
-      - EXT2 --> Detects an EXT2 Filesystem
-		- EXT3 --> Detects an EXT3 Filesystem
-		- EXT4 --> Detects an EXT4 Filesystem
-		- ERROR--> No file system detected
+      	- EXT2 --> Detects an EXT2 Filesystem
+	- EXT3 --> Detects an EXT3 Filesystem
+	- EXT4 --> Detects an EXT4 Filesystem
+	- ERROR--> No file system detected
 
 - **welcome.sh**
   - script to print ASCII art and welcome message to the user
@@ -46,11 +46,13 @@ iKnowdeDiscovery is an open source tool that enhances inode history and tracking
   - removes temporary files created by iKnowdeDiscovery tool
 
 - **print_line.sh**
-  - script used to reprint dashed line separator that are inline and sized with welcome banner
-
+  - script used to reprint dashed line separator 
+  - functional is ideal for creating visual separation between commands and tool output for user
 
 ##
+
 #### PROJECT REMINDER
 
  - When contributing to the project, make sure to **PULL** before you **PUSH**
+
 ##
