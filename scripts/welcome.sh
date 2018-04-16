@@ -12,7 +12,7 @@ echo -e "
                                                                             |___/  "
 
 echo -e " 
-	We should put a cool quote or something HERE...
+	Some heroes wear capes, others look at inodes.
 "
 
 # Adds a line to split up text on screen
