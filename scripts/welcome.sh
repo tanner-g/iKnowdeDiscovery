@@ -15,7 +15,6 @@ echo -e "
 	Some heroes wear capes, others look at inodes.
 "
 
-# Adds a line to split up text on screen
-	sh ./print_line.sh
-
+# Adds a line separator
+sh ./print_line.sh
 
