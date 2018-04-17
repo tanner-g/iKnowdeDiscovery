@@ -24,5 +24,3 @@ for ((i=0; i<$count; i++)); do
 	curr_ival="$(sed '2q;d' $tmp_dir/$i.txt)"
 	printf "%s\n" "$(debugfs -R 'ncheck '$curr_ival $curr_part 2>/dev/null)" > "$tmp_dir/$i.txt"
 done
-
-echo "it worked"
