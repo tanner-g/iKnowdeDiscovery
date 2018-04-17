@@ -18,8 +18,20 @@ read filesystempath
 # export makes variable global in scope
 export filesystempath
 sh ./print_line.sh
-# exit_detection.sh checks the filesystem type
+
+# makes tmp iKnowdeDisovery directory
+mkdir /usr/tmp/iKnowdeDiscovery/
+chmod 755 /usr/tmp/iKnowdeDiscovery/
+
+# ext_detection.sh checks the filesystem type
 sh ./ext_detection.sh
+
+# adds more visual separation between commands
+sh print_line.sh
+
+# Once filesystem is detected, suboptions can be printed
+sh set_options.py
+
 
 # cleans up temp. files made by subroutines in the tool
 sh ./clean_up.sh
@@ -29,3 +41,4 @@ sh ./clean_up.sh
 
 #./inode.sh <partition_path> <partition_type> (for EXT2/3/4)
 #./orphanNodes.sh <partition_path> (for EXT3/4 only)
+#./enumeration.sh <partition_path> <directory path> //need to in main ask user for path [ext2/3/4]
