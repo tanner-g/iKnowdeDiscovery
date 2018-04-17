@@ -30,7 +30,7 @@ sh ./ext_detection.sh
 sh print_line.sh
 
 # Once filesystem is detected, suboptions can be printed
-sh set_options.py
+python set_options.py
 
 
 # cleans up temp. files made by subroutines in the tool
