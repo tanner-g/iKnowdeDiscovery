@@ -8,12 +8,10 @@ echo "Using Directory: $search_dir"
 use_dir="$search_dir/*"
 tmp_dir="/usr/tmp/iKnowdeDiscovery/enum"
 
-declare -a inodes=()
-declare -A files=()
 fileNames=($use_dir)
 count=${#fileNames[@]}
-
-echo $fileNames
+declare -a inodes=()
+declare -A files=()
 
 mkdir -p $tmp_dir;
 
