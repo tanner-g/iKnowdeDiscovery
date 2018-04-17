@@ -64,7 +64,11 @@ def ext_4():
     userInput2 = str(raw_input("Is that correct? [Y(y)/N(n)]"))
     print(userInput2)
     if (userInput2 == "Y") or (userInput2 == "y"):
-        os.system("sudo ./enumeration.sh " + str(filesystempath))
+## add in logic for checking acutal user selection
+        userInput3 = str(raw_input("What directory: "))
+        os.system("sudo ./enumeration.sh " + str(filesystempath) + " " +userInput3)
+    # testing
+        os.system("sudo python ../'Temporary Files'/enum_to_dict.py")
     else:
         os.system("./print_line.sh")
         ext_4()
