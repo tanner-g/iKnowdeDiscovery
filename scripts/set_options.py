@@ -61,7 +61,7 @@ def ext_4():
     ext_4_print()
     userInput = raw_input("[PROMPT] Enter an option: ")
     print("You entered: " + str(userInput))
-    userInput2 = str(raw_input("Is that correct? [Y(y)/N(n)]"))
+    userInput2 = str(raw_input("Is that correct? [Y(y)/N(n)] "))
     print(userInput2)
     if (userInput2 == "Y") or (userInput2 == "y"):
 ## add in logic for checking acutal user selection
