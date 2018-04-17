@@ -4,10 +4,8 @@
 
 # Checking if the filesystem is either in ext2 or ext3/4
 echo [COMMAND] sudo file -s $filesystempath
-filesysteminfo=$(sudo file -s $filesystempath > user_path)
-result=$(python ext_detect.py < user_path)
-# echo is for TESTING
-#echo $result
+filesysteminfo=$(sudo file -s $filesystempath > /usr/tmp/iKnowdeDiscovery/user_path)
+result=$(python ext_detect.py < /usr/tmp/iKnowdeDiscovery/user_path)
 
 if [ "$result" == 'ERROR' ]
 then

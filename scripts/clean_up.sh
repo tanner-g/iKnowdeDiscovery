@@ -2,4 +2,4 @@
 
 
 # wipes iKnowdeDiscovery tmp working directory
-rm -rf /usr/tmp/iKnowdeDiscovery/
+#rm -rf /usr/tmp/iKnowdeDiscovery/
