@@ -20,7 +20,7 @@ export filesystempath
 sh ./print_line.sh
 
 # makes tmp iKnowdeDisovery directory
-mkdir /usr/tmp/iKnowdeDiscovery/
+mkdir -p /usr/tmp/iKnowdeDiscovery/
 chmod 755 /usr/tmp/iKnowdeDiscovery/
 
 # ext_detection.sh checks the filesystem type
