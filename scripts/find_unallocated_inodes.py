@@ -1,4 +1,4 @@
-if "Allocated" in open("/usr/tmp/iKnowdeDiscovery/inode_alloc_result.txt").read():
+if "Not Allocated" in open("/usr/tmp/iKnowdeDiscovery/inode_alloc_result.txt").read():
     f = open("/usr/tmp/iKnowdeDiscovery/inode_alloc_result.txt", "r")
     fi = open("/usr/tmp/iKnowdeDiscovery/unallocated_inodes.txt", "a")
     for line in f:

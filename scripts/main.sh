@@ -24,3 +24,8 @@ sh ./ext_detection.sh
 # cleans up temp. files made by subroutines in the tool
 sh ./clean_up.sh
 
+
+
+
+#./inode.sh <partition_path> <partition_type> (for EXT2/3/4)
+#./orphanNodes.sh <partition_path> (for EXT3/4 only)

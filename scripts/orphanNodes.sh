@@ -1,4 +1,4 @@
 #!/bin/bash
-partition=/dev/mapper/fedora-root
+partition=$1
 fsstat $partition > /usr/tmp/iKnowdeDiscovery/fsstat.txt
 python fsstat.py
