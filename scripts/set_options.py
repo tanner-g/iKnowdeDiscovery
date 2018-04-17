@@ -1,6 +1,8 @@
 #set_options.py will print and handle options based on filesystem type
 import os
 
+filesystempath = ""
+
 def read_params():
     filesystem_type = open("/usr/tmp/iKnowdeDiscovery/ext_type", "r")
     ext_option = filesystem_type.readline()
@@ -54,14 +56,15 @@ def ext_2():
         ext_2()
 def ext_3():
     print(" OPTIONS for EXT 3 will go here")
-
    # os.system("./option_ext3.sh")
 def ext_4():
-    userInput = input("[PROMPT] Enter an option: ")
+    ext_4_print()
+    userInput = raw_input("[PROMPT] Enter an option: ")
     print("You entered: " + str(userInput))
-    userInput2 = input("Is that correct? [Y(y)/N(n)]")
-    if (userInput2 == "Y" or userInput2 == "y"):
-        os.system("./enumeration.sh " + str(filesystempath))
+    userInput2 = str(raw_input("Is that correct? [Y(y)/N(n)]"))
+    print(userInput2)
+    if (userInput2 == "Y") or (userInput2 == "y"):
+        os.system("sudo ./enumeration.sh " + str(filesystempath))
     else:
         os.system("./print_line.sh")
         ext_4()
