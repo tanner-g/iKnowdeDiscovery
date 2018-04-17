@@ -1,6 +1,6 @@
 from subprocess import call
 partition = "/dev/mapper/fedora-root"
-file1 = open('fsstat.txt', 'r')
+file1 = open('/usr/tmp/iKnowdeDiscovery/fsstat.txt', 'r')
 inodes = list()
 for line in file1:
     if "Orphan" in line:
