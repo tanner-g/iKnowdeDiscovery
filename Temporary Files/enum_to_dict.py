@@ -1,6 +1,6 @@
 import os
 
-path = "usr/tmp/iKnowdeDiscovery/enum/"
+path = "/usr/tmp/iKnowdeDiscovery/enum/"
 
 dictionaries = []
 
