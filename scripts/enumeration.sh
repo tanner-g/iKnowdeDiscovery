@@ -13,6 +13,8 @@ declare -A files=()
 fileNames=($use_dir)
 count=${#fileNames[@]}
 
+echo $fileNames
+
 mkdir -p $tmp_dir;
 
 for ((i=0; i<$count; i++)); do
