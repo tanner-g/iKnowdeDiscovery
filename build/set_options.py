@@ -42,18 +42,18 @@ def system_check(ext_option, filesystempath):
     print("CHECKING: "+ ext_option)
     if ext_option == "EXT2":
         ext_2_print()
-        user_prompt()
+        user_prompt(ext_option, filesystempath)
     elif ext_option == "EXT3":
         ext_3_print()
-        user_prompt()
+        user_prompt(ext_option, filesystempath)
     elif ext_option == "EXT4":
         ext_4_print()
-        user_prompt()
+        user_prompt(ext_option, filesystempath)
     else:
         print("[ERROR]  No options available for your filesystem type")
         exit_program()
 
-def user_prompt():
+def user_prompt(ext_option, filesystempath):
     userInput = str(raw_input("[PROMPT] Enter an option [Exit(e)]: "))
     print("You entered: " + userInput)
     userInput2 = str(raw_input("Is that correct? [Y(y) / N(n)]: "))
@@ -61,7 +61,7 @@ def user_prompt():
         exit_program()    
     elif (userInput2 == "Y") or (userInput2 == "y"):
         if userInput == "1":
-            run_enumeration()
+            run_enumeration(filesystempath)
             print("Enumeration Worked!!!")
             user_prompt()       
         elif userInput == "2":
@@ -78,7 +78,7 @@ def user_prompt():
         user_prompt()
         
 
-def run_enumeration():
+def run_enumeration(filesystempath):
     userInput3 = str(raw_input("[PROMPT} Enter a full directory path: "))
     os.system("sudo ./enumeration.sh " + str(filesystempath) + " " +userInput3)
     # testing
