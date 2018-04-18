@@ -27,14 +27,14 @@ def ext_2_print():
 def ext_3_print():
     print("(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
-    print("(3) xxx")
+    print("(3) Find Orphan Nodes")
     print("(4) xxx")
     print("(5) xxx")
 
 def ext_4_print():
     print("(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
-    print("(3) xxx")
+    print("(3) Find Orphan Nodes")
     print("(4) xxx")
     print("(5) xxx")
 
@@ -70,11 +70,15 @@ def user_prompt(ext_option, filesystempath):
             os.system("sudo ./inode.sh " + filesystempath + " " + ext_option)
             system_check(ext_option, filesystempath)
         elif userInput == "3":
-            print("you choose option 3")
-            #user_prompt()
+            if ext_option == "EXT3" or ext_option == "EXT4":
+                print("[MESSAGE] Find Orphan Nodes Selected")
+                os.system("sudo ./orphanNodes.sh " + filesystempath)
+            else:
+                print("[ERROR] Bad Selection")
+                system_check(ext_option, filesystempath)
         else:
             print("[ERROR] Invalid Selection")
-            #user_prompt()
+            check_system(ext_option, filesystempath)
     else:
         print("[MESSAGE] Ok, Re-Entering User Prompt")
         user_prompt(ext_option, filesystempath)

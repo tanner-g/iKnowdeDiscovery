@@ -38,6 +38,6 @@ sh ./clean_up.sh
 
 
 
-#./inode.sh <partition_path> <partition_type> (for EXT2/3/4)
+# DONE./inode.sh <partition_path> <partition_type> (for EXT2/3/4)
 #./orphanNodes.sh <partition_path> (for EXT3/4 only)
 # DONE#./enumeration.sh <partition_path> <directory path> //need to in main ask user for path [ext2/3/4]
