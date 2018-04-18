@@ -65,6 +65,7 @@ def user_prompt(ext_option, filesystempath):
             if ext_option == "EXT3" or ext_option == "EXT4":
                 print("[MESSAGE] Find Orphan Nodes Selected")
                 os.system("sudo ./orphanNodes.sh " + filesystempath)
+                user_prompt(ext_option, filesystempath)     
             else:
                 print("[ERROR] Bad Selection")
                 user_prompt(ext_option, filesystempath)
