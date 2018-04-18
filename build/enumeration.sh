@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# enumeration.sh ...
 search_dir=$2
 curr_part=$1
 

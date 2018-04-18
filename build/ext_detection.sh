@@ -1,6 +1,5 @@
+#!/bin/bash
 # Script used to get ext filesytem information
-#! /bin/bash
-
 
 # Checking if the filesystem is either in ext2 or ext3/4
 echo [COMMAND] sudo file -s $filesystempath
