@@ -81,7 +81,7 @@ def run_enumeration(ext_option, filesystempath):
     userInput3 = str(raw_input("[PROMPT} Enter a full directory path: "))
     os.system("sudo ./enumeration.sh " + str(filesystempath) + " " +userInput3)
     # testing
-    os.system("sudo python ../'Temporary Files'/enum_to_dict.py")
+    os.system("sudo python3 plot.py")
     user_prompt(ext_option, filesystempath)
 
 def exit_program():

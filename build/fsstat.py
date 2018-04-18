@@ -9,11 +9,14 @@ for line in file1:
         for entry in entries:
             if entry != "Orphan" and entry != "Inodes:":
                 inodes.append(entry.strip(","))
-inodes.pop()
+if (len(inodes) != 0):
+    inodes.pop()
 file1.close()
 f = open("report.txt", "w")
 f.write("Inodes associated with open files pending deletion:  \n")
-for entry in inodes:
-    res = call(["./ffindInode.sh", partition, entry])
-    #f.write(entry + ",")
+if (len(inodes) == 0):
+    f.write("  No current orphan inodes.")
+else:
+    for entry in inodes:
+        res = call(["./ffindInode.sh", partition, entry])
 f.close()
