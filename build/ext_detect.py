@@ -3,12 +3,16 @@ import sys
 extcommandresult = ""
 filename = "/usr/tmp/iKnowdeDiscovery/ext_type"
 outputFile = open(filename, 'w')
+# user_path = file path typed by user
+filename2 = "/usr/tmp/iKnowdeDiscovery/user_path"
+outputFile2 = open(filename2, 'w')
+usertypedpath = ""
 
 for line in sys.stdin:
     extcommandresult = line
-
+    usertypedpath = line[0:line.find(":")]
+    outputFile2.write(usertypedpath) 
 if (extcommandresult.find("ext2") != -1): 
-#and (systempath.find("ext3") or systempath.find("ext4"))):
     print("EXT2")
     outputFile.write("EXT2")
 elif (extcommandresult.find("ext3")) != -1:
@@ -22,3 +26,4 @@ else:
     outputFile.write("ERROR")
 
 outputFile.close()
+outputFile2.close()

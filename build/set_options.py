@@ -61,7 +61,7 @@ def user_prompt(ext_option, filesystempath):
         exit_program()    
     elif (userInput2 == "Y") or (userInput2 == "y"):
         if userInput == "1":
-            run_enumeration(filesystempath)
+            run_enumeration(ext_option, filesystempath)
             print("Enumeration Worked!!!")
             user_prompt()       
         elif userInput == "2":
@@ -78,12 +78,12 @@ def user_prompt(ext_option, filesystempath):
         user_prompt()
         
 
-def run_enumeration(filesystempath):
+def run_enumeration(ext_option, filesystempath):
     userInput3 = str(raw_input("[PROMPT} Enter a full directory path: "))
     os.system("sudo ./enumeration.sh " + str(filesystempath) + " " +userInput3)
     # testing
     os.system("sudo python ../'Temporary Files'/enum_to_dict.py")
-    user_prompt()
+    user_prompt(ext_option, filesystempath)
 
 def exit_program():
     os.system("./print_line.sh")
