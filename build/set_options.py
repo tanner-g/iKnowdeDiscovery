@@ -10,7 +10,6 @@ def read_params():
     filesystempath = filesystem_path.readline()
     filesystem_path.close()
 
-
     if ext_option == "EXT2":
         ext_2()
     elif ext_option == "EXT3":
@@ -44,40 +43,54 @@ def ext_4_print():
     print("(4) xxx")
     print("(5) xxx")
 
+def user_prompt():
+    userInput = str(raw_input("[PROMPT] Enter an option [Exit(e)]: "))
+    print("You entered: " + userInput)
+    userInput2 = str(raw_input("Is that correct? [Y(y) / N(n)]: "))
+    if userInput == "e":
+        exit_program()    
+    elif (userInput2 == "Y") or (userInput2 == "y"):
+        if userInput == "1":
+            run_enumeration()
+            print("your back here")
+            user_prompt()       
+        elif userInput == "2":
+            print("You choose option 2")
+            user_prompt()
+        elif userInput == "3":
+            print("you choose option 3")
+            user_prompt()
+        else:
+            print("[ERROR] Invalid Selection")
+            user_prompt()
+    else:
+        print("[MESSAGE] Ok, Re-Entering User Prompt")
+        user_prompt()
+        
+   
+
 def ext_2():
     ext_2_print()
-    userInput = input("[PROMPT] Enter an option: ")
-    print("You entered: " + userInput)
-    userInput2 = input("Is that correct? [Y(y)/N(n)]")
-    if (userInput2 == "Y" or userInput2 == "y"):
-        os.system("./enumeration.sh "+filesystempath)
-    else:
-        os.system("./print_line.sh")
-        ext_2()
+    ext_2()
+
 def ext_3():
     print(" OPTIONS for EXT 3 will go here")
    # os.system("./option_ext3.sh")
+
 def ext_4():
     ext_4_print()
-    userInput = raw_input("[PROMPT] Enter an option: ")
-    print("You entered: " + str(userInput))
-    userInput2 = str(raw_input("Is that correct? [Y(y)/N(n)] "))
-    print(userInput2)
-    if (userInput2 == "Y") or (userInput2 == "y"):
-## add in logic for checking acutal user selection
-        if(userInput)
-        run_enumeration()       
-    else:
-        os.system("./print_line.sh")
-        ext_4()
+    user_prompt()
 
-   # os.system("./option_ext4.sh")
-   # os.system("./option_ext4.sh")
 def run_enumeration():
-    userInput3 = str(raw_input("What directory: "))
+    userInput3 = str(raw_input("[PROMPT} Enter a full directory path: "))
     os.system("sudo ./enumeration.sh " + str(filesystempath) + " " +userInput3)
     # testing
     os.system("sudo python ../'Temporary Files'/enum_to_dict.py")
+    user_prompt()
 
+def exit_program():
+    os.system("./print_line.sh")
+    os.system("[MESSAGE] Program Terminated by User")
+    os.system("./print_line.sh")
 
 read_params()

@@ -12,13 +12,13 @@ then
 	echo "[ERROR] BAD FILESYSTEM TYPE"
 elif [ "$result" == 'EXT2' ]
 then
-	echo "[OK] Filesytem type: EXT2"
+	echo "[MESSAGE] Filesytem type: EXT2"
 elif [ "$result" = 'EXT3' ]
 then
-	echo "[OK] Filesystem type: EXT3"
+	echo "[MESSAGE] Filesystem type: EXT3"
 elif [ "$result" == 'EXT4' ]
 then
-	echo "[OK] Filesystem type: EXT4"
+	echo "[MESSAGE] Filesystem type: EXT4"
 else
 	echo "[ERROR] NO FILESYSTEM TYPE DETECTED"
 fi
