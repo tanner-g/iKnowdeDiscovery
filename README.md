@@ -3,18 +3,17 @@
 
 ## Background
 
-iKnowdeDiscovery is an open source tool that enhances inode history and tracking by creating a user friendly visualization of a system's inode timelime. We strive to make inode information more meaningful to forensic investigators by making it easier to track, parse, and visualize data attached to an inode.
+iKnowdeDiscovery is an open source tool that enhances inode history tracking via a visual system inode timeline. We strive to make inode information more meaningful and comprehensible to forensic investigators. We aim to do this by making it easier to track, parse, and visualize data attached to an inode.
 
 
 ### Features
 
+ - **Hardlink File Detection**
+   - Detect multiple files that point to the same Inode
  - **Detect suspicious Inode Activity**
    - Detect, log, and show recently freed/created/altered Inodes
  - **Inode Tree Visualizer**
    - Use Python's PLOTLY to show Inodes on a graph
- - **Hardlink File Detection**
-   - Detect multiple files that point to the same Inode
-
 ##
 
 ### Files  
