@@ -20,16 +20,19 @@ def read_params():
 def ext_2_print():
     print("(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
+    #print("(3) Show Deleted Files")
 
 def ext_3_print():
     print("(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
     print("(3) Find Orphan Nodes")
+    #print("(4) Show Deleted Files")
 
 def ext_4_print():
     print("(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
     print("(3) Find Orphan Nodes")
+    #print("(4) Show Deleted FIles")
 
 def system_check(ext_option, filesystempath):
     if ext_option == "EXT2":
@@ -67,8 +70,16 @@ def user_prompt(ext_option, filesystempath):
                 os.system("sudo ./orphanNodes.sh " + filesystempath)
                 user_prompt(ext_option, filesystempath)     
             else:
+                #here would be the new thing I added
+                #print("[MESSAGE] Show Deleted Files Selected")
+                #os.system("sudo ./deleted_files.sh " + filesystempath)
                 print("[ERROR] Bad Selection")
                 user_prompt(ext_option, filesystempath)
+        #elif userInput == "4":
+        #    if ext_option == "EXT3" or ext_option == "EXT4":
+        #        print("[MESSAGE] Show Deleted Files Selected")
+        #        os.system("sudo ./deleted_files.sh " + filesystempath)
+        #        user_prompt(ext_option, filesystempath)
         else:
             print("[ERROR] Invalid Selection")
             user_prompt(ext_option, filesystempath)
