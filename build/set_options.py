@@ -13,46 +13,37 @@ def read_params():
 
     filesystem_path.close()
     filesystem_type.close()
-
-    # check user's filesystem type: health check
-    system_check(ext_option, filesystempath)
+    
+    # runs tool menu prompt loop
+    user_prompt(ext_option, filesystempath)
 
 def ext_2_print():
     print("(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
-    print("(3) xxx")
-    print("(4) xxx")
-    print("(5) xxx")
 
 def ext_3_print():
     print("(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
     print("(3) Find Orphan Nodes")
-    print("(4) xxx")
-    print("(5) xxx")
 
 def ext_4_print():
     print("(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
     print("(3) Find Orphan Nodes")
-    print("(4) xxx")
-    print("(5) xxx")
 
 def system_check(ext_option, filesystempath):
     if ext_option == "EXT2":
         ext_2_print()
-        user_prompt(ext_option, filesystempath)
     elif ext_option == "EXT3":
         ext_3_print()
-        user_prompt(ext_option, filesystempath)
     elif ext_option == "EXT4":
         ext_4_print()
-        user_prompt(ext_option, filesystempath)
     else:
         print("[ERROR]  No options available for your filesystem type")
         exit_program()
 
 def user_prompt(ext_option, filesystempath):
+    system_check(ext_option, filesystempath)
     userInput = str(raw_input("[PROMPT] Enter an option [Exit(e)]: "))
     print("[USER INPUT] You entered: " + userInput)
     userInput2 = str(raw_input("[USER INPUT] Is that correct? [Y(y) / N(n)]: "))
@@ -64,21 +55,22 @@ def user_prompt(ext_option, filesystempath):
             run_enumeration(ext_option, filesystempath)
 # testing
             print("Enumeration Worked!!!")
-            system_check(ext_option, filesystempath)       
+            user_prompt(ext_option, filesystempath)       
         elif userInput == "2":
             print("[MESSAGE] Inode Analysis Selected")
+            print("[MESSAGE] Analyzing... Please wait...")
             os.system("sudo ./inode.sh " + filesystempath + " " + ext_option)
-            system_check(ext_option, filesystempath)
+            user_prompt(ext_option, filesystempath)
         elif userInput == "3":
             if ext_option == "EXT3" or ext_option == "EXT4":
                 print("[MESSAGE] Find Orphan Nodes Selected")
                 os.system("sudo ./orphanNodes.sh " + filesystempath)
             else:
                 print("[ERROR] Bad Selection")
-                system_check(ext_option, filesystempath)
+                user_prompt(ext_option, filesystempath)
         else:
             print("[ERROR] Invalid Selection")
-            check_system(ext_option, filesystempath)
+            user_prompt(ext_option, filesystempath)
     else:
         print("[MESSAGE] Ok, Re-Entering User Prompt")
         user_prompt(ext_option, filesystempath)
