@@ -65,15 +65,19 @@ def ext_4():
     print(userInput2)
     if (userInput2 == "Y") or (userInput2 == "y"):
 ## add in logic for checking acutal user selection
-        userInput3 = str(raw_input("What directory: "))
-        os.system("sudo ./enumeration.sh " + str(filesystempath) + " " +userInput3)
-    # testing
-        os.system("sudo python ../'Temporary Files'/enum_to_dict.py")
+        if(userInput)
+        run_enumeration()       
     else:
         os.system("./print_line.sh")
         ext_4()
 
    # os.system("./option_ext4.sh")
    # os.system("./option_ext4.sh")
+def run_enumeration():
+    userInput3 = str(raw_input("What directory: "))
+    os.system("sudo ./enumeration.sh " + str(filesystempath) + " " +userInput3)
+    # testing
+    os.system("sudo python ../'Temporary Files'/enum_to_dict.py")
+
 
 read_params()
