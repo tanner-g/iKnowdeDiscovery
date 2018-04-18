@@ -1,5 +1,6 @@
 # set_options.py will print and handle options based on filesystem type
 import os
+import sys
 
 #filesystempath = ""     # filesytempath = full path for filesystem partition
 #ext_option = ""         # ext_option = file system type determined by script
@@ -18,28 +19,26 @@ def read_params():
 
 def ext_2_print():
     print("(1) Hardlink Visualizer")
-    print("(2) xxx")
+    print("(2) Inode Analysis")
     print("(3) xxx")
     print("(4) xxx")
     print("(5) xxx")
 
 def ext_3_print():
     print("(1) Hardlink Visualizer")
-    print("(2) xxx")
+    print("(2) Inode Analysis")
     print("(3) xxx")
     print("(4) xxx")
     print("(5) xxx")
 
 def ext_4_print():
     print("(1) Hardlink Visualizer")
-    print("(2) xxx")
+    print("(2) Inode Analysis")
     print("(3) xxx")
     print("(4) xxx")
     print("(5) xxx")
 
 def system_check(ext_option, filesystempath):
-# testing --> ext option value
-    print("CHECKING: "+ ext_option)
     if ext_option == "EXT2":
         ext_2_print()
         user_prompt(ext_option, filesystempath)
@@ -55,27 +54,30 @@ def system_check(ext_option, filesystempath):
 
 def user_prompt(ext_option, filesystempath):
     userInput = str(raw_input("[PROMPT] Enter an option [Exit(e)]: "))
-    print("You entered: " + userInput)
-    userInput2 = str(raw_input("Is that correct? [Y(y) / N(n)]: "))
+    print("[USER INPUT] You entered: " + userInput)
+    userInput2 = str(raw_input("[USER INPUT] Is that correct? [Y(y) / N(n)]: "))
     if userInput == "e":
         exit_program()    
     elif (userInput2 == "Y") or (userInput2 == "y"):
         if userInput == "1":
+            print("[MESSAGE] Hardlink Visualizer Selected")
             run_enumeration(ext_option, filesystempath)
+# testing
             print("Enumeration Worked!!!")
-            user_prompt()       
+            system_check(ext_option, filesystempath)       
         elif userInput == "2":
-            print("You choose option 2")
-            user_prompt()
+            print("[MESSAGE] Inode Analysis Selected")
+            os.system("sudo ./inode.sh " + filesystempath + " " + ext_option)
+            system_check(ext_option, filesystempath)
         elif userInput == "3":
             print("you choose option 3")
-            user_prompt()
+            #user_prompt()
         else:
             print("[ERROR] Invalid Selection")
-            user_prompt()
+            #user_prompt()
     else:
         print("[MESSAGE] Ok, Re-Entering User Prompt")
-        user_prompt()
+        user_prompt(ext_option, filesystempath)
         
 
 def run_enumeration(ext_option, filesystempath):
@@ -89,7 +91,7 @@ def exit_program():
     os.system("./print_line.sh")
     print("[MESSAGE] Program Terminated")
     os.system("./print_line.sh")
-
+    sys.exit()
 
 # start of script reads parameters, determine filesytem attributes
 read_params()
