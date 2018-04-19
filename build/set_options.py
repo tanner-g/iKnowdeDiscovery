@@ -18,21 +18,21 @@ def read_params():
     user_prompt(ext_option, filesystempath)
 
 def ext_2_print():
-    print("(1) Hardlink Visualizer")
+    print("\n(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
-    #print("(3) Show Deleted Files")
+    print("(3) Show Deleted Files\n")
 
 def ext_3_print():
-    print("(1) Hardlink Visualizer")
+    print("\n(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
     print("(3) Find Orphan Nodes")
-    #print("(4) Show Deleted Files")
+    print("(4) Show Deleted Files\n")
 
 def ext_4_print():
-    print("(1) Hardlink Visualizer")
+    print("\n(1) Hardlink Visualizer")
     print("(2) Inode Analysis")
     print("(3) Find Orphan Nodes")
-    #print("(4) Show Deleted FIles")
+    print("(4) Show Deleted Files\n")
 
 def system_check(ext_option, filesystempath):
     if ext_option == "EXT2":
@@ -50,8 +50,12 @@ def user_prompt(ext_option, filesystempath):
     userInput = str(raw_input("[PROMPT] Enter an option [Exit(e)]: "))
     print("[USER INPUT] You entered: " + userInput)
     userInput2 = str(raw_input("[USER INPUT] Is that correct? [Y(y) / N(n)]: "))
-    if userInput == "e":
+    if userInput == "e" and userInput2 == "y":
+        print("\n[MESSAGE] Results printed to report.txt")
         exit_program()    
+    elif userInput == "e" and userInput2 == "Y":
+        print("\n[MESSAGE] Results printed to report.txt")
+        exit_program()
     elif (userInput2 == "Y") or (userInput2 == "y"):
         if userInput == "1":
             print("[MESSAGE] Hardlink Visualizer Selected")
@@ -70,16 +74,19 @@ def user_prompt(ext_option, filesystempath):
                 os.system("sudo ./orphanNodes.sh " + filesystempath)
                 user_prompt(ext_option, filesystempath)     
             else:
-                #here would be the new thing I added
-                #print("[MESSAGE] Show Deleted Files Selected")
-                #os.system("sudo ./deleted_files.sh " + filesystempath)
-                print("[ERROR] Bad Selection")
+                print("[MESSAGE] Show Deleted Files Selected")
+                print("[MESSAGE] Finding deleted files...")
+                os.system("sudo ./deleted_files.sh " + filesystempath)
                 user_prompt(ext_option, filesystempath)
-        #elif userInput == "4":
-        #    if ext_option == "EXT3" or ext_option == "EXT4":
-        #        print("[MESSAGE] Show Deleted Files Selected")
-        #        os.system("sudo ./deleted_files.sh " + filesystempath)
-        #        user_prompt(ext_option, filesystempath)
+        elif userInput == "4":
+            if ext_option == "EXT3" or ext_option == "EXT4":
+                print("[MESSAGE] Show Deleted Files Selected")
+                print("[MESSAGE] Finding deleted files...")
+                os.system("sudo ./deleted_files.sh " + filesystempath)
+                user_prompt(ext_option, filesystempath)
+            else:
+                print("[ERROR] Invalid Selection")
+                user_prompt(ext_option, filesystempath)
         else:
             print("[ERROR] Invalid Selection")
             user_prompt(ext_option, filesystempath)

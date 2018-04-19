@@ -27,7 +27,6 @@ for data_file in os.listdir(path):
         inode = 0
         files = []
         file_dict = list()
-
 nodes = set()
 connections = set()
 weights = dict()

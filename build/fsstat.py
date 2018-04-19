@@ -12,7 +12,7 @@ for line in file1:
 if (len(inodes) != 0):
     inodes.pop()
 file1.close()
-f = open("report.txt", "w")
+f = open("report.txt", "a")
 f.write("Inodes associated with open files pending deletion:  \n")
 if (len(inodes) == 0):
     f.write("  No current orphan inodes.")
