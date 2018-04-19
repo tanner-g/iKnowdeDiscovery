@@ -60,8 +60,8 @@ def user_prompt(ext_option, filesystempath):
         if userInput == "1":
             print("[MESSAGE] Hardlink Visualizer Selected")
             run_enumeration(ext_option, filesystempath)
-# testing
-            print("Enumeration Worked!!!")
+
+            print("Visualization results written to 'inode.html'")
             user_prompt(ext_option, filesystempath)       
         elif userInput == "2":
             print("[MESSAGE] Inode Analysis Selected")
