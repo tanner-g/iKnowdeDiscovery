@@ -49,9 +49,3 @@ cd /iKnowdeDiscovery/build/
     - ERROR&nbsp;&nbsp;&nbsp;--> &nbsp;&nbsp;No file system detected
 
 ##
-
-#### PROJECT REMINDER
-
- - When contributing to the project, make sure to **PULL** before you **PUSH**
-
-##
